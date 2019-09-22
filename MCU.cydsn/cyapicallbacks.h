@@ -13,9 +13,9 @@
 #define CYAPICALLBACKS_H
     
 
-    /*Define your macro callbacks here */
-    /*For more information, refer to the Writing Code topic in the PSoC Creator Help.*/
+#define COULOMB_IRQ_INTERRUPT_INTERRUPT_CALLBACK
+void COULOMB_IRQ_Interrupt_InterruptCallback(void);
 
-    
+
 #endif /* CYAPICALLBACKS_H */   
 /* [] */

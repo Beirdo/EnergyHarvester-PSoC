@@ -17,6 +17,7 @@
 void prvSetupHardware(void) {
     setupInputScan();
     setupButtonScan();
+    setupCoulombMeter();
     CyGlobalIntEnable; /* Enable global interrupts. */
 }
 
@@ -26,6 +27,7 @@ int main(void) {
     
     xTaskCreate(doTaskInputScan, "input-scan", 100, NULL, 8, NULL);
     xTaskCreate(doTaskButtonScan, "button-scan", 100, NULL, 8, NULL);
+    xTaskCreate(doTaskCoulombMeter, "coulomb-meter", 100, NULL, 8, NULL);
     
     vTaskStartScheduler();
     

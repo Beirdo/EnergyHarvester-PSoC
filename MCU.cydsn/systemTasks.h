@@ -19,6 +19,9 @@ void doTaskInputScan(void *args);
 void setupButtonScan(void);
 void doTaskButtonScan(void *args);
 
+void setupCoulombMeter(void);
+void doTaskCoulombMeter(void *args);
+
 #endif // __systemTasks_h__
 
 /* [] END OF FILE */
