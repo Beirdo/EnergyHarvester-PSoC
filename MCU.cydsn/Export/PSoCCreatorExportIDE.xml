@@ -46,6 +46,7 @@
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\i2cRegisters.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\lcd_logo.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\SSD1306.c</File>
+          <File BuildType="BUILD" Toolchain="">gui.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\croutine.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\deprecated_definitions.h</File>

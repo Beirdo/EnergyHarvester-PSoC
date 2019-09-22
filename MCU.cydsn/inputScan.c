@@ -27,7 +27,7 @@ static uint8 nPGD2_Read(void);
 
 typedef uint8 (*digitalReadFunc_t)(void);
 
-digitalReadFunc_t digitalReadFunc[INPUT_COUNT] = {
+const digitalReadFunc_t digitalReadFunc[INPUT_COUNT] = {
     nPGD0_Read, nPGD1_Read, nPGD2_Read, CHRG_Read, FAULT_Read
 };
 
