@@ -1,0 +1,3 @@
+[submodule "SSD1306-PSoC"]
+	path = SSD1306-PSoC
+	url = git@github.com:Beirdo/SSD1306-PSoC.git
