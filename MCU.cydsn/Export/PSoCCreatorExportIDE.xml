@@ -6,7 +6,7 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m0plus -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0plus -mthumb -I..\FreeRTOS\ARM_CM0 -I..\FreeRTOS\include -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0plus -mthumb -I..\FreeRTOS\ARM_CM0 -I..\FreeRTOS\include -I..\SSD1306-PSoC\include -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
       <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0plus -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0plusgcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
@@ -42,6 +42,10 @@
           <File BuildType="BUILD" Toolchain="">inputScan.c</File>
           <File BuildType="BUILD" Toolchain="">buttonScan.c</File>
           <File BuildType="BUILD" Toolchain="">coulombMeter.c</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\glcdfont.c</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\i2cRegisters.c</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\lcd_logo.c</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\SSD1306.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\croutine.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\deprecated_definitions.h</File>
@@ -67,6 +71,10 @@
           <File BuildType="BUILD" Toolchain="">inputs.h</File>
           <File BuildType="BUILD" Toolchain="">buttons.h</File>
           <File BuildType="BUILD" Toolchain="">coulombMeter.h</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\gfxfont.h</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\i2cRegisters.h</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\SSD1306.h</File>
+          <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\utils.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\Workspace\EnergyHarvester-PSoC\MCU.cydsn">
