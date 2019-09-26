@@ -19,8 +19,8 @@ void doTaskInputScan(void *args);
 void setupButtonScan(void);
 void doTaskButtonScan(void *args);
 
-void setupCoulombMeter(void);
-void doTaskCoulombMeter(void *args);
+void setupBatteryMonitor(void);
+void doTaskBatteryMonitor(void *args);
 
 void setupGui(void);
 void doTaskGui(void *args);

@@ -41,12 +41,12 @@
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\MemMang\heap_1.c</File>
           <File BuildType="BUILD" Toolchain="">inputScan.c</File>
           <File BuildType="BUILD" Toolchain="">buttonScan.c</File>
-          <File BuildType="BUILD" Toolchain="">coulombMeter.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\glcdfont.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\i2cRegisters.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\lcd_logo.c</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\src\SSD1306.c</File>
           <File BuildType="BUILD" Toolchain="">gui.c</File>
+          <File BuildType="BUILD" Toolchain="">batteryMonitor.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\croutine.h</File>
           <File BuildType="BUILD" Toolchain="">..\FreeRTOS\include\deprecated_definitions.h</File>
@@ -71,11 +71,11 @@
           <File BuildType="BUILD" Toolchain="">systemTasks.h</File>
           <File BuildType="BUILD" Toolchain="">inputs.h</File>
           <File BuildType="BUILD" Toolchain="">buttons.h</File>
-          <File BuildType="BUILD" Toolchain="">coulombMeter.h</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\gfxfont.h</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\i2cRegisters.h</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\SSD1306.h</File>
           <File BuildType="BUILD" Toolchain="">..\SSD1306-PSoC\include\utils.h</File>
+          <File BuildType="BUILD" Toolchain="">ltc2942-1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\Workspace\EnergyHarvester-PSoC\MCU.cydsn">
@@ -103,8 +103,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SEL.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SEL.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SEL_aliases.h</File>
@@ -174,26 +172,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\BUTTON.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\BUTTON.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\BUTTON_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nSHDN.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nSHDN.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nSHDN_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nSHDN_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_POL.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_POL.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_POL_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_POL_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nPULSE.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nPULSE.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nPULSE_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\COULOMB_nPULSE_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHRG.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHRG.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHRG_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHRG_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_Sensing.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_Configuration.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ADC_Adc.c</File>
@@ -209,6 +187,10 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nPGD.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nPGD_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nPGD_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHARGE_ENABLE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHARGE_ENABLE.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHARGE_ENABLE_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CHARGE_ENABLE_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\Workspace\EnergyHarvester-PSoC\MCU.cydsn\Export\ARM_GCC_Generic\CapSense_P4_v6_0">

@@ -26,7 +26,7 @@
       <Data key="646b4886-0b39-466d-963b-58d64112afb9/30182841-2754-4aee-9532-9ff02059dfef" value="ADC_AdcInput" />
       <Data key="2110e59b-bac2-404c-8657-7e9bbf9097a7" value="FAULT" />
       <Data key="a1e9a9d5-8c22-4cff-9311-ea0437ffe014" value="PGD1" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="COULOMB_nSHDN" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="CHARGE_ENABLE" />
       <Data key="ecca669b-c978-44af-a725-5fd6de8e4ed1" value="ACPR" />
       <Data key="fd8ca673-4bb2-4bca-94fc-56ab212d722a" value="BUTTON" />
     </Group>
@@ -3796,6 +3796,9 @@
       <Group key="6">
         <Data key="Port Format" value="2,0" />
       </Group>
+      <Group key="7">
+        <Data key="Port Format" value="1,7" />
+      </Group>
     </Group>
     <Group key="2110e59b-bac2-404c-8657-7e9bbf9097a7">
       <Group key="0">
@@ -3809,7 +3812,7 @@
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="4,2" />
+        <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
     <Group key="ecca669b-c978-44af-a725-5fd6de8e4ed1">
