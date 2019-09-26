@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Bootloader" Path="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" Version="5.80" Type="Unknown">
+  <Project Name="Bootloader" Path="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" Version="5.80" Type="Bootloader">
     <CMSIS_SVD_File>Bootloader.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>

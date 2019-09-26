@@ -47,7 +47,7 @@
 #define configCPU_CLOCK_HZ			( ( unsigned long ) CYDEV_BCLK__SYSCLK__HZ )
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 100 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 1 * 1024 ) )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 512 ) )
 #define configMAX_TASK_NAME_LEN		( 12 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		0

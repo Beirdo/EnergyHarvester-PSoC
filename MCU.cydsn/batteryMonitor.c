@@ -96,7 +96,7 @@ void doTaskBatteryMonitor(void *args){
         
         // Convert to the units we want
         // batteryCharge is in uAH
-        // from datasheet:  Q [mAH] = 0.085 * M/128 * raw_charge
+        // from datasheet:  Q [mAH] = 0.085 mAH * M/128 * raw_charge
         batteryCharge = 85 * raw_charge;  // M = 128
         
         // We want battery voltage in mV

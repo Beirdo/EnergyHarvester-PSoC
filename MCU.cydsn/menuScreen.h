@@ -9,9 +9,16 @@
  *
  * ========================================
 */
-#ifndef CYAPICALLBACKS_H
-#define CYAPICALLBACKS_H
-    
 
-#endif /* CYAPICALLBACKS_H */   
-/* [] */
+#ifndef __menuScreen_h__
+#define __menuScreen_h__
+    
+#include "project.h"
+    
+void menu_screen_reset(void);
+void menu_screen_action(uint8 action, uint8 button);
+void menu_screen_refresh(void);
+    
+#endif // __menuScreen_h__
+
+/* [] END OF FILE */
