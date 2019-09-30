@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Bootloader" Path="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" Version="5.80" Type="Bootloader">
+  <Project Name="Bootloader" Path="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" Version="5.80" Type="Bootloader">
     <CMSIS_SVD_File>Bootloader.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,14 +34,14 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0plusIar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn\Generated_Source\PSoC4">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -82,6 +82,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_Bootload_scl_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_Bootload_SCB_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_Bootload_SCB_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cy_em_eeprom.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cy_em_eeprom.h</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC4\cm0plusgcc.ld</File>
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">Generated_Source\PSoC4\Cm0plusRealView.scat</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Cm0plusStart.c</File>
@@ -105,8 +107,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\core_cm0plus_psoc4.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cmsis_compiler.h</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC4\CyBootAsmGnu.s</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cy_em_eeprom.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cy_em_eeprom.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CyLFClk.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CyLFClk.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\project.h</File>
@@ -116,34 +116,34 @@
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="D:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
+        <Files Root="C:\Workspace\EnergyHarvester-PSoC\Bootloader.cydsn" />
       </Folder>
     </Folders>
   </Project>
