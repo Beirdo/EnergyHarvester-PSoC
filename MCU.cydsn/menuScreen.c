@@ -75,11 +75,11 @@ const slide_entry_t slidesReadingsEntries[] = {
     { .label = (const uint8 *)"PGD0:", .slideNum = 1, .xLabel = 0, .yLabel = 1, .x = 10, .y = 1, .width = 10, .func = displayActiveLow, .data = &digitalInputs[INPUT_nPGD0] },
     { .label = (const uint8 *)"PGD1:", .slideNum = 1, .xLabel = 0, .yLabel = 2, .x = 10, .y = 2, .width = 10, .func = displayActiveLow, .data = &digitalInputs[INPUT_nPGD1] },
     { .label = (const uint8 *)"Enabled:", .slideNum = 1, .xLabel = 0, .yLabel = 3, .x = 10, .y = 3, .width = 10, .func = displayActiveHigh, .data = (void *)&chargeEnable },
-    { .label = (const uint8 *)"BattPresent:", .slideNum = 1, .xLabel = 0, .yLabel = 0, .x = 13, .y = 0, .width = 10, .func = displayActiveHigh, .data = (void *)&batteryPresent },
-    { .label = (const uint8 *)"BattFault:", .slideNum = 1, .xLabel = 0, .yLabel = 1, .x = 13, .y = 1, .width = 10, .func = displayActiveHigh, .data = (void *)&batteryFault },
-    { .label = (const uint8 *)"BattCharge:", .slideNum = 1, .xLabel = 0, .yLabel = 2, .x = 13, .y = 2, .width = 10, .func = displayAmpHours, .data = (void *)&batteryCharge },
-    { .label = (const uint8 *)"BattVoltage:", .slideNum = 1, .xLabel = 0, .yLabel = 3, .x = 13, .y = 3, .width = 10, .func = displayVolts, .data = (void *)&batteryVoltage },
-    { .label = (const uint8 *)"BattTemp:", .slideNum = 1, .xLabel = 0, .yLabel = 4, .x = 13, .y = 4, .width = 10, .func = displayTemperature, .data = (void *)&batteryTemperature },
+    { .label = (const uint8 *)"BattPresent:", .slideNum = 2, .xLabel = 0, .yLabel = 0, .x = 13, .y = 0, .width = 10, .func = displayActiveHigh, .data = (void *)&batteryPresent },
+    { .label = (const uint8 *)"BattFault:", .slideNum = 2, .xLabel = 0, .yLabel = 1, .x = 13, .y = 1, .width = 10, .func = displayActiveHigh, .data = (void *)&batteryFault },
+    { .label = (const uint8 *)"BattCharge:", .slideNum = 2, .xLabel = 0, .yLabel = 2, .x = 13, .y = 2, .width = 10, .func = displayAmpHours, .data = (void *)&batteryCharge },
+    { .label = (const uint8 *)"BattVoltage:", .slideNum = 2, .xLabel = 0, .yLabel = 3, .x = 13, .y = 3, .width = 10, .func = displayVolts, .data = (void *)&batteryVoltage },
+    { .label = (const uint8 *)"BattTemp:", .slideNum = 2, .xLabel = 0, .yLabel = 4, .x = 13, .y = 4, .width = 10, .func = displayTemperature, .data = (void *)&batteryTemperature },
 };
 
     
