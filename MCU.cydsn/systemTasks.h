@@ -21,6 +21,7 @@ void doTaskButtonScan(void *args);
 
 void setupBatteryMonitor(void);
 void doTaskBatteryMonitor(void *args);
+void batteryEject(void);
 
 void setupGui(void);
 void doTaskGui(void *args);

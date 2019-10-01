@@ -24,6 +24,8 @@ struct CY_PACKED_ATTR _slide_entry;
 typedef enum {
     SCREEN_MENU,
     SCREEN_SLIDES,
+    SCREEN_TOGGLE,
+    SCREEN_CHOICES,
 } screenType_t;
     
 typedef struct CY_PACKED_ATTR _menu {
@@ -37,16 +39,31 @@ typedef struct CY_PACKED_ATTR _slides {
     uint8 slideCount;
 } slides_t;
 
+typedef struct CY_PACKED_ATTR _toggle {
+    void *data;
+} toggle_t;
+
+typedef struct CY_PACKED_ATTR _choices {
+    void *data;
+    void *choices;
+    uint8 count;
+} choices_t;
+
 typedef struct CY_PACKED_ATTR _screen {
     screenType_t type;
     union {
         struct CY_PACKED_ATTR _menu menu;
         struct CY_PACKED_ATTR _slides slides;
+        struct CY_PACKED_ATTR _toggle toggle;
+        struct CY_PACKED_ATTR _choices choices;
     } item;
 } screen_t;
+
+typedef void (*menu_format_func_t)(uint8 *buffer, uint8 width, uint8 *format);
     
 typedef struct CY_PACKED_ATTR _menu_entry {
     const uint8 *string;
+    menu_format_func_t func;
     const struct CY_PACKED_ATTR _screen *screen;
 } menu_entry_t;
 

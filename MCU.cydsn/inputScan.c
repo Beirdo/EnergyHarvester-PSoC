@@ -47,8 +47,10 @@ void doTaskInputScan(void *args)
     TickType_t xLastWakeTime;
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
     int i;
+    uint8 prevConnectBattery;
     
     xLastWakeTime = xTaskGetTickCount();
+    prevConnectBattery = 0;
     
     while(1)
     {
@@ -74,7 +76,15 @@ void doTaskInputScan(void *args)
             digitalInputs[i] = digitalReadFunc[i]();
         }
         
-        if (digitalInputs[INPUT_nPGD0] || digitalInputs[INPUT_nPGD1]) {
+        if (!connectBattery) {
+            if (prevConnectBattery) {
+                // This was just shut off.  Send a shutdown to the battery monitor chip on the battery pack
+                batteryEject();
+            }
+            chargeEnable = 0;
+        } else if (overrideDisabled) {
+            chargeEnable = 0;
+        } else if (digitalInputs[INPUT_nPGD0] || digitalInputs[INPUT_nPGD1]) {
             chargeEnable = 0;
         } else if (chargeEnable) {
             if (adcReadings[ADC_PACKP] < 500) {
@@ -90,6 +100,8 @@ void doTaskInputScan(void *args)
             // A battery is connected, enable charging
             chargeEnable = 1;
         }
+        
+        prevConnectBattery = connectBattery;
     }
 }
 

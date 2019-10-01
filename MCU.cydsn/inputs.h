@@ -37,8 +37,12 @@ typedef enum {
 extern uint16 adcReadings[ADC_CHANNELS];    // scaled to original voltages, in mV
 extern uint8 digitalInputs[INPUT_COUNT];
 extern uint16 chargeCurrent;
-extern volatile uint8 chargeEnable;        // this is an output, the pin is active high
+extern volatile uint8 chargeEnable;         // this is an output, the pin is active high
 extern volatile uint8 selectValue;          // this is an output, and drives 2 pins to select which transformer to use
+
+// in menuScreen.c
+extern volatile uint8 connectBattery;       // input from the menu, defaults to 0 (no battery), and can be set to 1 when connected
+extern volatile uint8 overrideDisabled;     // input from the menu, let the user manually override the enable (set 1 to disable)
 
 // in batteryMonitor.c
 extern volatile uint8 batteryPresent;

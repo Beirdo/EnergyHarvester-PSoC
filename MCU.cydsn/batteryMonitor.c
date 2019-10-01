@@ -82,6 +82,10 @@ void doTaskBatteryMonitor(void *args){
         // Wake up every 1s (the onboard ADC readings are on a 2s cycle)
         vTaskDelayUntil(&xLastWakeTime, xPeriod);
 
+        if (!connectBattery) {
+            continue;
+        }
+        
         // Check that the battery is still there
         initializeBatteryMonitor();
         
@@ -110,6 +114,12 @@ void doTaskBatteryMonitor(void *args){
         // Mask off the status bits that should not cause shutdown
         batteryFault = batteryStatus & 0x3E;
     }
+}
+
+void batteryEject(void)
+{
+    // Set control register: sleep mode, prescale at 128, disable alarm pin, shutdown.
+    i2c_register_write(LTC2942_I2C_ADDR, LTC2942_CONTROL, 0x39);
 }
 
 /* [] END OF FILE */
