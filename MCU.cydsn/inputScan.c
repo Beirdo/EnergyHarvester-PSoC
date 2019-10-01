@@ -24,7 +24,7 @@ volatile uint8 selectValue;         // this is an output, and drives 2 pins to s
 
 static uint8 nPGD0_Read(void);
 static uint8 nPGD1_Read(void);
-\
+
 typedef uint8 (*digitalReadFunc_t)(void);
 
 const digitalReadFunc_t digitalReadFunc[INPUT_COUNT] = {
